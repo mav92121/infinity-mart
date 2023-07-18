@@ -1,14 +1,19 @@
 import React, { useContext } from 'react'
 import '../Checkout.css'
 import {CartContext} from "../App"
-import Product from './Product';
 import CheckoutProduct from './CheckoutProduct'
 const Checkout = () => {
   const data=useContext(CartContext);
+  var name;
+  if(!data.user)
+  {
+    name="Guest"
+  }
+  else name=data.user.email;
   return (
     <div className='checkout'>
       <div className="checkout_left">
-      <h2 className='heading'>Your shopping basket</h2>
+      <h2 className='heading'> Hello {name} Your Shopping basket will appear below</h2>
       {
         data.cart.map((ele)=>(
           <CheckoutProduct id={ele.id} name={ele.name} price={ele.price} path={ele.path} />

@@ -2,10 +2,17 @@ import React, { useContext } from 'react'
 import '../Header.css'
 import {BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import {CartContext} from "../App"
-
+import { auth } from '../firebase'
 const Header = () => 
 {
   const data=useContext(CartContext);
+  const handleAuth=()=>
+  {
+    if(data.user)
+    {
+      auth.signOut();
+    }
+  }
   return (
     <div className='main-header'>
       <div className="logo">
@@ -27,13 +34,15 @@ const Header = () =>
           <i class="fa-solid fa-magnifying-glass fa-xl"></i>
           </div>
           </div>
-          <Link to="/login">
-          <div className='header_content_up_down'>
+          <Link to={!data.user && "/login"}>
+          <div className='header_content_up_down' onClick={handleAuth}>
             <div>
               Hello
             </div>
             <span className='bold'>
-              Sign In
+            {
+              data.user ? 'Sign Out' : 'Sign In'
+            }
             </span>
           </div>
           </Link>

@@ -1,6 +1,5 @@
 import React, {useContext, useState } from 'react'
 import '../Product.css'
-import { useStateValue } from './StateProvider'
 import {CartContext} from "../App"
 
 const Product = ({id,name,price,rating,path}) => 
@@ -17,7 +16,6 @@ const Product = ({id,name,price,rating,path}) =>
       id:data.cartCount,
     }])
     data.setCartCount(data.cartCount+1);
-    // alert("Product added to Cart")
   }
   var arr=new Array();
   rating= +rating;
