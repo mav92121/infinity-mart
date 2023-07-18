@@ -1,0 +1,72 @@
+.Product
+{
+    display: inline-block;
+    width: 25%; 
+    margin:33px;
+    height: max-content;
+    background-color: white;
+    padding:20px;
+}
+.price
+{
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom:10px;
+    margin-left:5px;
+}
+.product_image
+{
+    height:200px;
+}
+.description
+{
+    margin:10px;
+}
+.ratings
+{
+    margin-bottom: 10px;
+}
+.product_image
+{
+    margin-bottom: 10px;;
+}
+.fa-indian-rupee-sign
+{
+    margin-left: 10px;;
+}
+.cart-button
+{
+    cursor: pointer;
+    padding:5px;
+    background: aquamarine;
+    font-weight: bold;
+    margin:auto;
+    border-radius: 13px;
+    margin-top:20px;
+    width: 230px;
+    height:35px;
+}
+.fa-star
+{
+    color:gold;
+}
+.Checkout
+{
+    width:24%;
+    /* border: 2px solid red; */
+    margin:0;
+    margin-top: 0px;
+    margin-left:30px;
+    margin-bottom: 30px;;
+    background-color:white;
+}
+.middle-product
+{
+    text-align: center;
+}
+
+.cart-button:hover
+{
+    color:white;
+    background-color: #4e5890;
+}

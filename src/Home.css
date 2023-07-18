@@ -1,0 +1,41 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.body_image
+{
+    width:100vw;
+    height:auto;
+    height:50vh;
+}
+.body_bg
+{
+    background-color: #4e5890;
+    color:white;
+    font-size:45px;
+    text-align: center;
+    margin:0;
+    padding: 0;
+}
+.body_bg > h2
+{
+    font-size:50px;
+   padding-top: 30px;
+   margin-bottom: 30px;
+}
+.body_bg > h3
+{
+    font-size:30px;
+    /* padding-top: 30px; */
+   padding-bottom: 60px; 
+   
+   
+}
+.body_home
+{
+    background-color: rgb(187, 187, 187);
+    width: 90%;
+    margin:auto;
+    /* align-items: center; */
+}
